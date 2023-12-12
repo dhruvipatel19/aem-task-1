@@ -1,0 +1,43 @@
+
+<sly data-sly-use.model="com.adobe.aem.guides.task.core.models.Task1ComponentModel" />
+    <div class="cmp__task1_container">
+        <div class="cmp__task1_content">
+            <h2 class="img-title">${model.title}</h2>
+            <p class="img-description">${model.description}</p>
+            <a href="${model.buttonLink}" target="_blank">
+                ${model.buttonText}
+            </a>
+        </div>
+
+        <img class="img-container" src="${model.imagePath}" alt="There is a problem loading image">
+    </div>
+
+
+<style>
+
+    .cmp__task1_container {
+      position: relative;
+    }
+
+    .cmp__task1_content {
+      background-color: white;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cmp__task1_content h2 {
+      margin-top: 0;
+    }
+
+    .cmp__task1_content .img-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+</style>
